@@ -1,8 +1,8 @@
 require('dotenv').config()
 
 const express = require('express')
-const workoutRoutes = require('./toutes/workouts')
-const mealRoutes = require('./toutes/meals')
+const workoutRoutes = require('./routes/workouts')
+const mealRoutes = require('./routes/meals')
 
 //express app
 const app = express()
