@@ -1,5 +1,7 @@
 //day 1 (9-9-23)
 
+
+
 //first commit
 
 //currently added backend and frontend folder
@@ -17,3 +19,5 @@
 
 
 //third commit
+
+//created routes for workouts and meals that are functioning in postman
