@@ -1,20 +1,24 @@
 require('dotenv').config()
 
 const express = require('express')
+const workoutRoutes = require('./toutes/workouts')
+const mealRoutes = require('./toutes/meals')
 
 //express app
 const app = express()
 
 //middleware
+app.use(express.json())
+
 app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
 })
 
 //routes
-app.get('/', (req, res) => {
-    res.json({mssg:`Welcome`})
-})
+app.use('/api/workouts', workoutRoutes)
+
+app.use('/api/meals', mealRoutes)
 
 //listening
 app.listen(process.env.PORT, ()=>{
