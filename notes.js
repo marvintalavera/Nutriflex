@@ -1,7 +1,6 @@
 //day 1 (9-9-23)
 
 
-
 //first commit
 
 //currently added backend and frontend folder
@@ -21,3 +20,17 @@
 //third commit
 
 //created routes for workouts and meals that are functioning in postman
+
+
+
+//day 2 (9-11-23)
+
+
+//fourth commit
+
+//created controllers for meals and workouts, they all function with postman
+//and changed routes to go through controllers
+
+//connected to database and it sends and operates fully with CRUD
+
+//backend finished
