@@ -1,3 +1,7 @@
+//backend nodemon
+//frontend npm start?
+
+
 //day 1 (9-9-23)
 
 
@@ -34,3 +38,4 @@
 //connected to database and it sends and operates fully with CRUD
 
 //backend finished
+
