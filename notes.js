@@ -39,3 +39,16 @@
 
 //backend finished
 
+
+//day 4 (9-16-23)
+
+
+//fifth commit
+
+//added css and made the workout cards
+
+//added css and made meal cards
+
+//connected cards to data
+
+//crud works from postman
