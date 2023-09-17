@@ -54,6 +54,13 @@
 //crud works from postman
 
 
+
 //sixth commit 
 
 //added workout and meal forms, they submit and add but don't auto refresh site
+
+
+
+//seventh commit
+
+//safety save, figuring out how to make dispatch global variable with both useEffect functions
