@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
+
 import WorkoutDetails from "../components/WorkoutDetails"
 import MealDetails from "../components/MealDetails"
+import NewWorkout from "../components/NewWorkout"
+import NewMeal from "../components/NewMeal"
 
 const Home = () => {
   const [workouts, setWorkouts] = useState(null)
@@ -39,12 +42,14 @@ const Home = () => {
           <WorkoutDetails key={workout._id} workout={workout}/>
         ))}
       </div>
+      <NewWorkout/>
       <h1>Meals</h1>
       <div className="meals">
         {meals && meals.map((meal) => (
           <MealDetails key={meal._id} meal={meal}/>
         ))}
       </div>
+      <NewMeal/>
     </div>
   )
 }
