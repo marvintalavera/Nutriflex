@@ -1,6 +1,8 @@
 import { useState } from "react"
+import { useMealsContext } from "../hooks/useMealsContext"
 
 const NewMeal = () => {
+    const { dispatch } = useMealsContext()
     const [ title, setTitle] = useState('')
     const [ calories, setCalories] = useState('')
     const [ portion, setPortion] = useState('')
@@ -28,7 +30,9 @@ const NewMeal = () => {
             setCalories('')
             setPortion('')
             setError(null)
-            console.log('new meal added', json)        }
+            console.log('new meal added', json)
+            dispatch({type: 'CREATE_MEAL', payload: json})
+        }
     }
 
     return(

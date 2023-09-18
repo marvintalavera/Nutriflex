@@ -64,3 +64,9 @@
 //seventh commit
 
 //safety save, figuring out how to make dispatch global variable with both useEffect functions
+
+
+
+//eighth commit
+
+//able to delete data and auto refreshes on site

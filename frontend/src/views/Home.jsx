@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react"
+/*import { useEffect, useState} from "react"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 
 import WorkoutDetails from "../components/WorkoutDetails"
@@ -55,4 +55,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home */
