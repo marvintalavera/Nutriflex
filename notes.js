@@ -78,3 +78,11 @@
 //error pops up if fields are missing, looks nicer
 
 //fixed dispatch into dependency array
+
+
+
+//tenth commit
+
+//app done but need to make it have authentication and clean up css
+
+//updated the time to look normal

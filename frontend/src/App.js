@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 //import Home from './views/Home';
 import Navbar from './components/Navbar';
-import Footer from './components/footer';
 import MealHome from './views/MealHome';
 import WorkoutHome from './views/WorkoutHome';
 
@@ -18,7 +17,6 @@ function App() {
             />
           </Routes>
         </div>
-        <Footer/>
       </BrowserRouter>
     </div>
   );

@@ -1,6 +1,8 @@
 import React from 'react'
 import { useMealsContext } from '../hooks/useMealsContext'
 
+import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+
 const MealDetails = ({ meal }) => {
   const { dispatch } = useMealsContext()
 
@@ -19,8 +21,8 @@ const MealDetails = ({ meal }) => {
         <h4>{meal.title}</h4>
         <p><strong>Calories: </strong>{meal.calories}</p>
         <p><strong>Portion (oz): </strong>{meal.portion}</p>
-        <p>{meal.createdAt}</p>
-        <span onClick={handleClick}>delete</span>
+        <p>{formatDistanceToNow(new Date(meal.createdAt), { addSuffix: true })}</p>
+        <span className='material-symbols-outlined' onClick={handleClick}>delete</span>
     </div>
   )
 }
