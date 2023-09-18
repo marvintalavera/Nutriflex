@@ -18,7 +18,7 @@ const MealHome = () => {
       }
   
       fetchMeals()
-    }, [])
+    }, [dispatch])
     return (
       <div>
               <h1>Meals</h1>

@@ -18,7 +18,7 @@ const WorkoutHome = () => {
       }
   
       fetchWorkouts()
-    }, [])
+    }, [dispatch])
     return (
       <div>
               <h1>Workouts</h1>

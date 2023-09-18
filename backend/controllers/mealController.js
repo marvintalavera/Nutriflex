@@ -32,6 +32,21 @@ const getMeal = async (req, res) => {
 const createMeal = async (req, res) => {
     const {title, calories, portion} = req.body
 
+    let emptyFields = []
+
+    if(!title) {
+        emptyFields.push('title')
+    }
+    if(!calories) {
+        emptyFields.push('calories')
+    }
+    if(!portion) {
+        emptyFields.push('portion')
+    }
+    if(emptyFields.length > 0) {
+        return res.status(400).json({ error: 'Please fill in all the fields', emptyFields })
+    }
+
     //add to mongo
     try {
         const meal = await Meal.create({title, calories, portion})

@@ -7,6 +7,7 @@ const NewMeal = () => {
     const [ calories, setCalories] = useState('')
     const [ portion, setPortion] = useState('')
     const [error, setError] = useState('')
+    const [emptyFields, setEmptyFields] = useState([])
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -24,12 +25,14 @@ const NewMeal = () => {
 
         if (!response.ok) {
             setError(json.error)
+            setEmptyFields(json.emptyFields)
         }
         if (response.ok) {
             setTitle('')
             setCalories('')
             setPortion('')
             setError(null)
+            setEmptyFields([])
             console.log('new meal added', json)
             dispatch({type: 'CREATE_MEAL', payload: json})
         }
@@ -44,6 +47,7 @@ const NewMeal = () => {
             type="text"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
+            className={emptyFields.includes('title') ? 'error' : ''}
             />
 
             <label>:Calories:</label>
@@ -51,6 +55,7 @@ const NewMeal = () => {
             type="number"
             onChange={(e) => setCalories(e.target.value)}
             value={calories}
+            className={emptyFields.includes('calories') ? 'error' : ''}
             />
 
             <label>Portion (oz):</label>
@@ -58,6 +63,7 @@ const NewMeal = () => {
             type="number"
             onChange={(e) => setPortion(e.target.value)}
             value={portion}
+            className={emptyFields.includes('portion') ? 'error' : ''}
             />
 
             <button>Submit Meal</button>

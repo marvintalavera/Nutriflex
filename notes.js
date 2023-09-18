@@ -70,3 +70,11 @@
 //eighth commit
 
 //able to delete data and auto refreshes on site
+
+
+
+//ninth commit
+
+//error pops up if fields are missing, looks nicer
+
+//fixed dispatch into dependency array
