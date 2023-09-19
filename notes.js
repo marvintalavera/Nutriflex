@@ -100,3 +100,9 @@
 //twelveth commit
 
 //user is allowed to sign up and adds to collection on postman and hashes the password with bcrypt
+
+
+
+//thirteenth commit
+
+//checks if password and email are valid
