@@ -88,6 +88,7 @@
 //updated the time to look normal
 
 
+//day 5 (9-18-23)
 
 //eleventh commit
 
@@ -106,3 +107,9 @@
 //thirteenth commit
 
 //checks if password and email are valid
+
+
+
+//fourteenth commit
+
+//password is hashed and made into a token, the actual password is not uploaded to mongo
