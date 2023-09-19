@@ -94,3 +94,9 @@
 //created user controller, schema, and routes for them to sign up and login, works with postman
 
 //hovering over delete turns red
+
+
+
+//twelveth commit
+
+//user is allowed to sign up and adds to collection on postman and hashes the password with bcrypt
