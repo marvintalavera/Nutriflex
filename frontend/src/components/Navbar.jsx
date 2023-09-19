@@ -8,6 +8,12 @@ const Navbar = () => {
             <Link to='/'>
                 <h1>NutriFlex</h1>
             </Link>
+            <nav>
+              <div>
+                <Link to="/login">Log in</Link>
+                <Link to="/signup">Signup</Link>
+              </div>
+            </nav>
         </div>
     </header>
   )

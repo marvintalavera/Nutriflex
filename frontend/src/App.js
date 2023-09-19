@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import MealHome from './views/MealHome';
 import WorkoutHome from './views/WorkoutHome';
+import Login from './views/Login';
+import Signup from './views/Signup';
 
 function App() {
   return (
@@ -14,6 +16,14 @@ function App() {
             <Route
               path='/'
               element={[<WorkoutHome/>, <MealHome/>]}
+            />
+            <Route
+              path='/login'
+              element={[<Login/>]}
+            />
+            <Route
+              path='/signup'
+              element={[<Signup/>]}
             />
           </Routes>
         </div>
