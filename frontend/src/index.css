@@ -7,12 +7,12 @@
   --error: #e7195a;
 }
 body {
-  background: #fff;
+  background: #e9e9e9;
   margin: 0;
   font-family: "Poppins";
 }
 header {
-  background: #f7d5a2;
+  background: #ffc772;
 }
 .container {
   max-width: 1400px;
@@ -140,6 +140,9 @@ nav {
 }
 nav a {
   margin-left: 10px;
+}
+nav a:hover{
+  color: #fff;
 }
 /* auth forms */
 form.signup, form.login {
