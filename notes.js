@@ -86,3 +86,11 @@
 //app done but need to make it have authentication and clean up css
 
 //updated the time to look normal
+
+
+
+//eleventh commit
+
+//created user controller, schema, and routes for them to sign up and login, works with postman
+
+//hovering over delete turns red
