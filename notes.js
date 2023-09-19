@@ -119,3 +119,9 @@
 //fifthteenth commit
 
 //able to login from postman and checks if password and email are correct with one in database
+
+
+
+//sixteenth commit
+
+//created and styled login and sign up page and sends it back to console
