@@ -131,3 +131,9 @@
 //17th
 
 //created useSignUp hook and works
+
+
+
+//18th
+
+//created logout hook and allows you to login and logout and shows the user logged in and if they are the login and sign up buttons disappear

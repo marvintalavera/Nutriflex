@@ -144,6 +144,20 @@ nav a {
 nav a:hover{
   color: #fff;
 }
+nav button {
+  background: #ffc772;
+  color: black;
+  border: 2px solid black;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+}
+nav button:hover {
+  color: #fff;
+  border: 2px solid #fff;
+}
 /* auth forms */
 form.signup, form.login {
   max-width: 400px;
