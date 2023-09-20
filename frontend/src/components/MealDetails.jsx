@@ -1,14 +1,23 @@
 import React from 'react'
 import { useMealsContext } from '../hooks/useMealsContext'
+import { useAuthContext } from '../hooks/useAuthContext'
 
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 const MealDetails = ({ meal }) => {
   const { dispatch } = useMealsContext()
+  const { user } = useAuthContext()
 
   const handleClick = async () => {
+    if (!user) {
+      return
+    }
+
     const response = await fetch('/api/meals/' + meal._id, {
-      method: 'DELETE'
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${user.token}`
+      }
   })
   const json = await response.json()
 

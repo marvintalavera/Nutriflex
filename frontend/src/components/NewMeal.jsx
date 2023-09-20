@@ -1,8 +1,11 @@
 import { useState } from "react"
 import { useMealsContext } from "../hooks/useMealsContext"
+import { useAuthContext } from "../hooks/useAuthContext"
 
 const NewMeal = () => {
     const { dispatch } = useMealsContext()
+    const { user } = useAuthContext()
+
     const [ title, setTitle] = useState('')
     const [ calories, setCalories] = useState('')
     const [ portion, setPortion] = useState('')
@@ -12,13 +15,19 @@ const NewMeal = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
+        if (!user) {
+            setError('You must be logged in')
+            return
+        }
+
         const meal = { title, calories, portion }
 
         const response = await fetch('/api/meals', {
             method: 'POST',
             body: JSON.stringify(meal),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
             }
         })
         const json = await response.json()
