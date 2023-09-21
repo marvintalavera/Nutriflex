@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:4000/",
+  "proxy": "https://nutriflex.onrender.com",
   "name": "milestone",
   "version": "0.1.0",
   "private": true,
