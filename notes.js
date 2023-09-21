@@ -143,3 +143,9 @@
 //19th
 
 //safety save, doesn't allow to submit meals, state.meals not iterable
+
+
+
+//20th
+
+//fix bugs and now allows to add data to meals and stays there when you refresh

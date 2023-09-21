@@ -10,8 +10,8 @@ export const mealsReducer = (state, action) => {
             }
         case 'CREATE_MEAL':
             return {
-                meals: [action.payload, ...state.meals]
-            }
+                meals: state.meals ? [action.payload, ...state.meals] : [action.payload]
+              }
         case 'DELETE_MEAL':
             return {
                 meals: state.meals.filter((w) => w._id !== action.payload._id)

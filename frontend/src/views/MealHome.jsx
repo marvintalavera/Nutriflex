@@ -16,10 +16,10 @@ const MealHome = () => {
             'Authorization': `Bearer ${user.token}`
           }
         })
-        const json = await response.json()  
-        
+        const json = await response.json()
+  
         if (response.ok) {
-          dispatch({type: 'SET_WORKOUTS', payload: json})
+          dispatch({type: 'SET_MEALS', payload: json})
         }
       }
       if (user) {
