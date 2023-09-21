@@ -4,7 +4,9 @@ const mongoose = require('mongoose')
 //get all meals
 
 const getMeals = async (req, res) => {
-    const meals = await Meal.find({}).sort({createdAt: -1})
+    const user_id = req.user._id
+
+    const meals = await Meal.find({ user_id }).sort({createdAt: -1})
 
     res.status(200).json(meals)
 }
@@ -49,7 +51,8 @@ const createMeal = async (req, res) => {
 
     //add to mongo
     try {
-        const meal = await Meal.create({title, calories, portion})
+        const user_id = req.user._id
+        const meal = await Meal.create({title, calories, portion, user_id})
         res.status(200).json(meal)
     } catch (error) {
         res.status(400).json({error: error.message})
